@@ -1,0 +1,96 @@
+
+h1{
+    text-align: center;
+    color:aquamarine;
+    font-family: cursive;
+    border: 10px ;
+    height: 90px;
+    font-size: 80px;
+}
+.currentPlayer{
+    text-align: center;
+    margin: 30px solid blue;
+    color: aliceblue;
+    
+}
+
+body{
+    background-image: url("https://www.publicdomainpictures.net/pictures/130000/velka/night-sky-background-14391263141jp.jpg");
+}
+
+.board { 
+    /* border:3px solid black;  */
+    size: 10   0px;
+    padding-left: 500px;
+    display:flex; 
+    flex-wrap:wrap; 
+    height:276px; 
+    width:330px; 
+    /* background:blue; */
+    justify-content: center;
+    align-items: center;
+} 
+.board div { 
+    height:40px; 
+    width:40px; 
+    margin:3px;
+    border-radius:70px;
+}
+.square{ 
+    
+    background: white; 
+    } 
+   
+    .player-one { 
+    background:red;
+    }
+    .player-two { 
+    background:yellow; 
+    }
+ 
+button{
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    top: 90%;
+    left: 46%;
+    background-color: black;
+    color: aliceblue;
+    
+     
+}
+
+
+/* .grid{
+display: grid;
+grid-template-columns: repeat(7, 100px);
+border-radius: 10px;
+grid-template-rows: repeat(6, 100px);
+width: 600px;
+height: 590px;
+margin: 0 auto;
+justify-content: center;
+background-color: lightseagreen;
+}
+
+.cell{
+    border: 5px solid black;
+    background-color: whitesmoke;
+    border-radius: 20%;
+    outline: 5px solid black;
+}
+ */
+
+ /* .fall {
+    animation-name: fall-animation;
+    animation-duration: 700ms;
+}
+
+@keyframes fall-animation {
+    from {
+        transform: translateY(-900px);
+    }
+    to {
+        transform: translateY(0);
+    }
+} */
