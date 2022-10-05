@@ -1,63 +1,153 @@
-
-h1{
-    text-align: center;
-    color:aquamarine;
-    font-family: cursive;
-    border: 10px ;
-    height: 90px;
-    font-size: 80px;
-}
-.currentPlayer{
-    text-align: center;
-    margin: 30px solid blue;
-    color: aliceblue;
-    
-}
-
-body{
-    background-image: url("https://www.publicdomainpictures.net/pictures/130000/velka/night-sky-background-14391263141jp.jpg");
-}
-
-.board { 
-    /* border:3px solid black;  */
-    size: 10   0px;
-    padding-left: 500px;
-    display:flex; 
-    flex-wrap:wrap; 
-    height:276px; 
-    width:330px; 
-    /* background:blue; */
-    justify-content: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     align-items: center;
-} 
-.board div { 
-    height:40px; 
-    width:40px; 
-    margin:3px;
-    border-radius:70px;
-}
-.square{ 
-    
-    background: white; 
-    } 
-   
-    .player-one { 
-    background:red;
-    }
-    .player-two { 
-    background:yellow; 
-    }
- 
-button{
-    width: 90px;
-    height: 40px;
-    position: absolute;
-    top: 90%;
-    left: 46%;
-    background-color: black;
-    color: aliceblue;
-    
-     
-}
-
-
+    background: white;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 25px;
+    width: 100%;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 80px;
+    color: lightcoral;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    height: 700px;
+    margin: 10px 0 25px;
+    width: 700px;
+  }
+  
+  .cell {
+    align-items: center;
+    background: gainsboro;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 100px;
+  }
+  #cell row-top col-0{
+    background-color: aliceblue;
+  }
+  
+  .cell::after {
+     background: beige;
+     border-radius: 50%;
+     border: 3px solid black;
+     content: '';
+     cursor: pointer;
+     height: 75px;
+     width: 75px;
+   }
+  
+  .cell:not(.row-top).red::after {
+    background: red;
+  }
+  .cell:not(.row-top).yellow::after {
+    background: yellow;
+  }
+  
+  .cell:not(.row-top).red.win {
+    background: red;
+  }
+  
+  .cell:not(.row-top).yellow.win {
+    background: yellow;
+  }
+  
+  .cell.row-top {
+    background: white;
+  }
+  
+  .cell.row-top::after {
+    border: none;
+  }
+  
+  .cell.row-top.red::after {
+    background: red;
+    border: 3px solid black;
+  }
+  
+  .cell.row-top.yellow::after {
+    background: yellow;
+    border: 3px solid black;
+  }
+  
+  .footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+  }
+  
+  .reset {
+    background-color: burlywood;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-transform: uppercase;
+  }
+  
+  .reset:hover {
+    background-color: blueviolet;
+  }
+  
+  .reset:active {
+    background-color: gray;
+  
+  }
+  
+  .status {
+    display: block;
+    font-size: 20px;
+  }
+  
+  /* Util CSS */
+  .left-border {
+    border-left: 3px solid black;
+  }
+  
+  .top-border {
+    border-top: 3px solid black;
+  }
+  
+  .right-border {
+    border-right: 3px solid black;
+  }
+  
+  .bottom-border {
+    border-bottom: 3px solid black;
+  }
+  
+  .left-border.top-border {
+    border-radius: 10px 0 0 0;
+  }
+  
+  .right-border.top-border {
+    border-radius: 0 10px 0 0;
+  }
+  
+  .right-border.bottom-border {
+    border-radius: 0 0 10px 0;
+  }
+  
+  .left-border.bottom-border {
+    border-radius: 0 0 0 10px;
+  }

@@ -76,15 +76,14 @@ function loadDOM(){
             setTimeout(()=>alert("boxes filled"),300)
             setTimeout(()=>restart.style.display="flex",500) 
             } 
-            // }else{
-            // alert("You cannot build on an empty space or on a space that has been built on")
+            
             } 
             }
 
             function checkWon(){
                 let squares =document.querySelectorAll(".board div")
-                for (let y=0;y<winningArray.length;y++){
-                let square =winningArray[y]
+                for (let i=0;i<winningArray.length;i++){
+                let square =winningArray[i]
                 if(square.every(q=>squares[q].classList.contains("player-one"))){
                   setTimeout(() =>alert("Red wins "), 200)
                   setTimeout(() =>restart.style.display="flex", 500)
